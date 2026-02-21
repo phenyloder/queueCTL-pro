@@ -24,9 +24,7 @@ public final class DlqRepositoryImpl extends RepositorySupport implements DlqRep
     return inEntityManager(
             entityManager ->
                 entityManager
-                    .createQuery(
-                        "select d from DlqEntry d order by d.movedAt desc",
-                        DlqEntry.class)
+                    .createQuery("select d from DlqEntry d order by d.movedAt desc", DlqEntry.class)
                     .setMaxResults(limit)
                     .getResultList())
         .stream()

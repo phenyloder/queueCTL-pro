@@ -9,7 +9,8 @@ import java.util.UUID;
 
 public interface JobService {
 
-  JobDto enqueue(String queue, String command, List<String> args, Integer maxRetries, Instant runAt);
+  JobDto enqueue(
+      String queue, String command, List<String> args, Integer maxRetries, Instant runAt);
 
   List<JobDto> list(Optional<JobState> state, Optional<String> queue, int limit);
 

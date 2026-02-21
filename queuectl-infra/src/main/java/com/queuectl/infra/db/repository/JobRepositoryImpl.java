@@ -261,8 +261,7 @@ public final class JobRepositoryImpl extends RepositorySupport implements JobRep
   public Optional<JobDto> getJob(UUID jobId) {
     return inEntityManager(
         entityManager ->
-            Optional.ofNullable(entityManager.find(Job.class, jobId))
-                .map(jobMapper::toDomain));
+            Optional.ofNullable(entityManager.find(Job.class, jobId)).map(jobMapper::toDomain));
   }
 
   @Override
@@ -329,8 +328,7 @@ public final class JobRepositoryImpl extends RepositorySupport implements JobRep
             entityManager ->
                 entityManager
                     .createQuery(
-                        "select j.state, count(j) from Job j group by j.state",
-                        Object[].class)
+                        "select j.state, count(j) from Job j group by j.state", Object[].class)
                     .getResultList())
         .forEach(
             row ->

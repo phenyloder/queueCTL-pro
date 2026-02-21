@@ -22,8 +22,7 @@ public final class WorkerRepositoryImpl extends RepositorySupport implements Wor
             entityManager ->
                 entityManager
                     .createQuery(
-                        "select count(w) from Worker w where w.lastSeen >= :threshold",
-                        Long.class)
+                        "select count(w) from Worker w where w.lastSeen >= :threshold", Long.class)
                     .setParameter("threshold", threshold)
                     .getSingleResult());
     return (int) count;

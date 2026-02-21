@@ -38,12 +38,12 @@ import java.time.Duration;
 import java.time.Instant;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-import java.util.Set;
 import javax.sql.DataSource;
 import org.awaitility.Awaitility;
 import org.junit.jupiter.api.AfterAll;
@@ -84,7 +84,8 @@ class QueueWorkerIntegrationTest {
     POSTGRES.start();
     dataSource =
         DataSourceFactory.create(
-            new DbSettings(POSTGRES.getJdbcUrl(), POSTGRES.getUsername(), POSTGRES.getPassword(), 8));
+            new DbSettings(
+                POSTGRES.getJdbcUrl(), POSTGRES.getUsername(), POSTGRES.getPassword(), 8));
     FlywayMigrator.migrate(dataSource);
     entityManagerFactory = EntityManagerFactoryProvider.create(dataSource);
     jobRepository = new JobRepositoryImpl(entityManagerFactory);

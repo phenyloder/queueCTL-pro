@@ -6,5 +6,6 @@ import java.time.Duration;
 import java.util.Set;
 
 public interface JobRunner {
-  ExecutionResult run(JobDto job, Duration timeout, Set<String> allowedCommands, long maxOutputBytes);
+  ExecutionResult run(
+      JobDto job, Duration timeout, Set<String> allowedCommands, long maxOutputBytes);
 }

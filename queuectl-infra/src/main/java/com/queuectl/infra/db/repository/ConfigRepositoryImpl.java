@@ -31,7 +31,6 @@ public final class ConfigRepositoryImpl extends RepositorySupport implements Con
   public Optional<String> getConfig(String key) {
     return inEntityManager(
         entityManager ->
-            Optional.ofNullable(entityManager.find(Config.class, key))
-                .map(Config::getValue));
+            Optional.ofNullable(entityManager.find(Config.class, key)).map(Config::getValue));
   }
 }

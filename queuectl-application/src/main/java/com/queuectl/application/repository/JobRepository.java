@@ -14,7 +14,8 @@ public interface JobRepository {
   JobDto enqueue(
       String queue, String command, List<String> args, int maxRetries, Instant runAt, Instant now);
 
-  List<JobDto> leaseJobs(List<String> queues, int limit, UUID leaseId, Duration leaseTtl, Instant now);
+  List<JobDto> leaseJobs(
+      List<String> queues, int limit, UUID leaseId, Duration leaseTtl, Instant now);
 
   boolean markProcessing(UUID jobId, UUID leaseId, Instant now);
 

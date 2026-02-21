@@ -1,0 +1,6 @@
+workers,elapsed_seconds,jobs_per_second,effective_concurrency,peak_active,completed,failed,dead,status
+1,27.396,1.752,0.876,1,48,0,0,ok
+2,14.717,3.262,1.631,2,48,0,0,ok
+4,8.549,5.615,2.808,4,48,0,0,ok
+8,5.620,8.541,4.271,8,48,0,0,ok
+12,4.964,9.670,4.835,12,48,0,0,ok

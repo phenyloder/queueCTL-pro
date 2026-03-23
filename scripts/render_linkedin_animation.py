@@ -316,7 +316,7 @@ def build_filtergraph() -> str:
   for x, y, w, h in [store, workers, retry, dlq, completed, footer]:
     panel(filters, x, y, w, h)
 
-  filters.append(drawtext("How queuectl processes queued jobs", 70, 58, size=38, color=INK, font=TITLE_FONT))
+  filters.append(drawtext("Working of QueueCTL Pro", 70, 58, size=38, color=INK, font=TITLE_FONT))
   filters.append(
       drawtext(
           "Two queues, four jobs, three workers. Three jobs complete directly; one job fails, waits in retry, runs again, then lands in the DLQ.",

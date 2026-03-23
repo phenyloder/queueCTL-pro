@@ -171,6 +171,7 @@ Then open `http://127.0.0.1:8080` to view:
 ## Architecture Overview
 
 See `docs/architecture.md` for module boundaries, MVC layering, state machine, leasing algorithm, retry policy, DLQ handling, and observability.
+See `docs/lld-uml.md` for class, sequence, and state UML diagrams.
 Runtime flow is `Controller -> Service Interface -> Repository/SPI Contract -> JPA/Infra Implementation`.
 
 ## Trade-offs

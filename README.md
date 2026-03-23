@@ -1,6 +1,6 @@
-# queuectl
+# QueueCTL Pro
 
-`queuectl` is a production-grade CLI background job queue built with Java 21, Picocli, PostgreSQL, JPA/Hibernate, Flyway, virtual-thread workers, and Testcontainers integration tests.
+`QueueCTL Pro` is a production-grade CLI background job queue built with Java 21, Picocli, PostgreSQL, JPA/Hibernate, Flyway, virtual-thread workers, and Testcontainers integration tests.
 
 ## Tech Stack
 
